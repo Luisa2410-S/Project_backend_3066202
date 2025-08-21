@@ -8,9 +8,9 @@ class CrudController {
     }
 
     //obtener un registro por ID
-    async obtenerUno(tabla, idcampo, id){
+    async obtenerUno(tabla, idCampo, id){
         try {
-            const [resultado] = await db.query(`SELECT * FROM ?? WHERE ?? = ?`,[tabla, idcampo, id]);
+            const [resultado] = await db.query(`SELECT * FROM ?? WHERE ?? = ?`,[tabla, idCampo, id]);
             return resultado[0];
         } catch (error) {
             throw error;
